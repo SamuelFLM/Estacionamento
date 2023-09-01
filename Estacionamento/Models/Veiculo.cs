@@ -5,8 +5,15 @@ using System.Threading.Tasks;
 
 namespace Estacionamento.Models
 {
-    public class Estacionamento
+    public class Veiculo
     {
-        
+
+        public void RegistrarVeiculo(){
+
+        }
+
+        public void RemoverVeiculo(){
+
+        }
     }
 }
