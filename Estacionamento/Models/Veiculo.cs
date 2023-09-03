@@ -38,9 +38,16 @@ namespace Estacionamento.Models
         }
         public void ListarVeiculo()
         {
-            foreach (var item in Veiculos)
+            if (Veiculos.Count == 0)
             {
-                Console.WriteLine(item);
+                Console.WriteLine("Sem veículos cadastrados.");
+            }
+            else
+            {
+                foreach (var item in Veiculos)
+                {
+                    Console.WriteLine(item);
+                }
             }
         }
 
