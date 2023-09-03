@@ -18,11 +18,16 @@ internal class Program
         Menu menu = new Menu();
         Veiculo veiculo = new Veiculo(veiculos);
 
-
         menu.ValorBase();
-        valorBase = Convert.ToDecimal(Console.ReadLine());
+        while(!decimal.TryParse(Console.ReadLine(), out valorBase)){
+            Console.WriteLine("Erro, por favor informe um valor valido.");
+            Console.Write("Digite: ");
+        }
         menu.ValorHora();
-        valorHora = Convert.ToDecimal(Console.ReadLine());
+        while(!decimal.TryParse(Console.ReadLine(), out valorHora)){
+            Console.WriteLine("Erro, por favor informe um valor valido.");
+            Console.Write("Digite: ");
+        }
 
         while (exibirMenu)
         {
