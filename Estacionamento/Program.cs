@@ -35,7 +35,30 @@ internal class Program
                 case "1": menu.AdicionarVeiculo(); placaVeiculo = Console.ReadLine(); veiculo.AdicionarVeiculo(placaVeiculo); Console.WriteLine("\nPressione para continuar..."); Console.ReadKey(); break;
                 case "2": menu.RemoverVeiculo(); Console.Write("\nPLACAS VEICULOS\n\n"); veiculo.ListarVeiculo(); Console.Write("\nDigite: "); placaVeiculo = Console.ReadLine(); veiculo.RemoverVeiculo(placaVeiculo); Console.WriteLine("\nPressione para continuar..."); Console.ReadKey(); break;
                 case "3": menu.ListarVeiculo(); veiculo.ListarVeiculo(); Console.WriteLine("\nPressione para continuar..."); Console.ReadKey(); break;
-                case "4": menu.Encerrar(); exibirMenu = false; break;
+                case "4":
+                    menu.FecharContaVeiculo();
+                    Console.Write("\nPLACAS VEICULOS\n\n"); veiculo.ListarVeiculo(); Console.Write("\nDigite: ");
+                    placaVeiculo = Console.ReadLine();
+                    bool validacao = veiculo.VerificarPlarcaExistente(placaVeiculo);
+                    if (validacao){
+                        try{
+                            menu.FecharContaVeiculoHoras();
+                            decimal horasVeiculo = Convert.ToDecimal(Console.ReadLine());
+                            veiculo.FecharContaVeiculo(placaVeiculo,valorBase, valorHora, horasVeiculo);
+                            Console.WriteLine("\nPressione para continuar..."); Console.ReadKey();
+                        }
+                        catch(Exception){
+                            Console.WriteLine("Erro, por favor tente novamente.");
+                            Console.ReadKey();
+                        }
+                    }
+                    else{
+                        Console.WriteLine("Erro, por favor tente novamente.");
+                        Console.ReadKey();
+                    }
+
+                    break;
+                case "5": menu.Encerrar(); exibirMenu = false; break;
                 default: Console.WriteLine("\nPor favor, tente novamente..."); Console.ReadKey(); break;
             }
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 
 namespace Estacionamento.Models
@@ -15,27 +16,25 @@ namespace Estacionamento.Models
         }
         public void AdicionarVeiculo(string? veiculo)
         {
-            if (!Veiculos.Contains(veiculo))
+            bool validacao = VerificarPlarcaExistente(veiculo);
+            if (!validacao)
             {
                 Veiculos.Add(veiculo);
                 Console.WriteLine("\nVeículo adicionado....");
             }
             else
-            {
                 Console.WriteLine("\nNão foi possivel, veiculo existente.");
-            }
         }
         public void RemoverVeiculo(string? veiculo)
         {
-            if (Veiculos.Contains(veiculo))
+            bool validacao = VerificarPlarcaExistente(veiculo);
+            if (validacao)
             {
                 Veiculos.Remove(veiculo);
                 Console.WriteLine("\nVeículo deletado....");
             }
             else
-            {
                 Console.WriteLine("\nNão foi possivel, placa não existente.");
-            }
         }
         public void ListarVeiculo()
         {
@@ -45,8 +44,26 @@ namespace Estacionamento.Models
             }
         }
 
-        public void FecharContaVeiculo(){
+        public void FecharContaVeiculo(string? veiculo,decimal valorBase, decimal valorHoras, decimal horasVeiculo)
+        {
+            decimal valorTotal = (horasVeiculo * valorHoras) + valorBase;
+            Console.Clear();
+            Console.WriteLine("\nNOTA FISCAL");
+            Console.WriteLine($"\nESTABELECIMENTO: ESTACIONAMENTO DEV FRACO");
+            Console.WriteLine($"\nCPNJ: 09.401.131/0001-55");
+            Console.WriteLine($"\nFORMA DE PAGAMENTO SELECIONADA: PIX");
+            Console.WriteLine($"\nTOTAL A PAGAR: R${valorTotal:F2}");
+            Console.WriteLine("\nPROCESSANDO PAGAMENTO.....");
+            Console.WriteLine("\nPAGAMENTO REALIZADO COM SUCESSO!\n");
+            Veiculos.Remove(veiculo);
+        }
 
+        public bool VerificarPlarcaExistente(string? veiculo)
+        {
+            if (Veiculos.Contains(veiculo))
+                return true;
+            else
+                return false;
         }
     }
 }

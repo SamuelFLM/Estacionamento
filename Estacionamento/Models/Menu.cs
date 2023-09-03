@@ -15,7 +15,8 @@ namespace Estacionamento.Models
             Console.WriteLine("\n1 - Adicionar um veículo");
             Console.WriteLine("\n2 - Remover um veículo");
             Console.WriteLine("\n3 - Listar veículos");
-            Console.WriteLine("\n4 - Encerrar");
+            Console.WriteLine("\n4 - Fechar conta veículo");
+            Console.WriteLine("\n5 - Encerrar");
             Console.Write("\nDigite: ");
         }
 
@@ -53,6 +54,19 @@ namespace Estacionamento.Models
             Console.Clear();
             Console.WriteLine("--------------------------");
             Console.WriteLine("\nLISTANDO VEÍCULOS\n");
+        }
+        public void FecharContaVeiculo(){
+            Console.Clear();
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("\nFECHAMENTO CONTA VEÍCULO\n");
+            Console.WriteLine("\nPor Favor, informe a placa do veiculo.");
+        }
+        public void FecharContaVeiculoHoras(){
+            Console.Clear();
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("\nFECHAMENTO CONTA VEÍCULO\n");
+            Console.WriteLine("\nPor Favor, informe as horas permanecidas no estacionamento...");
+            Console.Write("\nDigite: ");
         }
         public void Encerrar()
         {
