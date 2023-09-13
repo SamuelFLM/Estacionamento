@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lazer\\OneDrive\\Área de Trabalho\\Estacionamento-Csharp\\Estacionamento\\Estacionamento.csproj": {}
+    "C:\\Users\\Lazer\\OneDrive\\Área de Trabalho\\Estacionamento\\Estacionamento\\Estacionamento.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lazer\\OneDrive\\Área de Trabalho\\Estacionamento-Csharp\\Estacionamento\\Estacionamento.csproj": {
+    "C:\\Users\\Lazer\\OneDrive\\Área de Trabalho\\Estacionamento\\Estacionamento\\Estacionamento.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lazer\\OneDrive\\Área de Trabalho\\Estacionamento-Csharp\\Estacionamento\\Estacionamento.csproj",
+        "projectUniqueName": "C:\\Users\\Lazer\\OneDrive\\Área de Trabalho\\Estacionamento\\Estacionamento\\Estacionamento.csproj",
         "projectName": "Estacionamento",
-        "projectPath": "C:\\Users\\Lazer\\OneDrive\\Área de Trabalho\\Estacionamento-Csharp\\Estacionamento\\Estacionamento.csproj",
+        "projectPath": "C:\\Users\\Lazer\\OneDrive\\Área de Trabalho\\Estacionamento\\Estacionamento\\Estacionamento.csproj",
         "packagesPath": "C:\\Users\\Lazer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lazer\\OneDrive\\Área de Trabalho\\Estacionamento-Csharp\\Estacionamento\\obj\\",
+        "outputPath": "C:\\Users\\Lazer\\OneDrive\\Área de Trabalho\\Estacionamento\\Estacionamento\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

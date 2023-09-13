@@ -25,6 +25,7 @@ namespace Estacionamento.Models
             else
                 Console.WriteLine("\nNão foi possivel, veiculo existente.");
         }
+
         public void RemoverVeiculo(string? veiculo)
         {
             bool validacao = VerificarPlarcaExistente(veiculo);

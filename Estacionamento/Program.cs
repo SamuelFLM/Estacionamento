@@ -10,8 +10,8 @@ internal class Program
 
         List<string?> veiculos = new List<string?>();
         string? placaVeiculo;
-        bool exibirMenu = true;
         string? opcaoUsuario;
+        bool exibirMenu = true;
         decimal valorBase;
         decimal valorHora;
 
@@ -19,7 +19,8 @@ internal class Program
         Veiculo veiculo = new Veiculo(veiculos);
 
         menu.ValorBase();
-        while(!decimal.TryParse(Console.ReadLine(), out valorBase)){
+        while(!decimal.TryParse(Console.ReadLine(), out valorBase))
+        {
             Console.WriteLine("Erro, por favor informe um valor valido.");
             Console.Write("Digite: ");
         }
